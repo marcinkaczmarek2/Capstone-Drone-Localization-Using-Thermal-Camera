@@ -27,7 +27,7 @@ The project integrates the following components:
 
 A detailed, step-by-step operational manual is provided in the document:
 
-CAPSTONE-MODULE-USER-GUIDE
+CAPSTONE-MODULE-USER-GUIDE.docx
 
 This README describes the architecture and structure of the repository, while the User Guide explains how to use each module in practice.
 
