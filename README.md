@@ -62,6 +62,7 @@ Main directories included in the repository:
   Weekly milestones, experiments, datasets, and evaluation results.
 
 - CAPSTONE-MODULE-USER-GUIDE.docx
+ - 
   Complete operational manual for the project.
 
 ---
