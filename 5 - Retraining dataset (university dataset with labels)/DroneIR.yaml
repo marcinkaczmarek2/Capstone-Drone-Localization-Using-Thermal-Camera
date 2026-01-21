@@ -1,0 +1,8 @@
+train: datasets/DroneIR/train
+val: datasets/DroneIR/val
+test: datasets/DroneIR/test
+
+# Classes
+names:
+  0: drone
+nc: 1

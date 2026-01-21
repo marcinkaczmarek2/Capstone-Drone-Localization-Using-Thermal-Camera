@@ -1,0 +1,42 @@
+{
+  "SettingsVersion": 1.2,
+  "SimMode": "Multirotor",
+  "Vehicles": {
+    "Chaser": {
+      "VehicleType": "SimpleFlight",
+      "AutoCreate": true,
+      "X": 0,
+      "Y": 0,
+      "Z": 0,
+      "Cameras": {
+        "thermal_cam": {
+          "CaptureSettings": [
+            {
+              "ImageType": 0,
+              "Width": 640,
+              "Height": 512,
+              "FOV_Degrees": 60,
+              "TargetGamma": 1.0
+            }
+          ],
+          "X": 0.2,
+          "Y": 0.0,
+          "Z": -0.1,
+          "Pitch": 0,
+          "Roll": 0,
+          "Yaw": 0
+        }
+      }
+    },
+    "Target": {
+      "VehicleType": "SimpleFlight",
+      "AutoCreate": true,
+      "X": 0,
+      "Y": 20,
+      "Z": 0
+    }
+  },
+  "SubWindows": [
+    { "WindowID": 0, "CameraName": "thermal_cam", "VehicleName": "Chaser" }
+  ]
+}

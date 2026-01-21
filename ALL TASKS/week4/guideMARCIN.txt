@@ -1,0 +1,30 @@
+dla gtx 1060:
+
+wszystko w glownym directory repo
+
+conda create -n yolov5 python=3.10 -y
+conda activate yolov5
+
+!!!! stara wersja, tylko dla gtx 1060, znalezc swoja dla swojej karty: !!!!
+pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu118
+
+pip install -r requirements.txt
+
+trenowanie dla gtx
+!!!! TUTAJ TEZ ZMIENIC LICZBE BATCH oraz MOZE DEVICE, W ZALEZNOSCI OD MOCY KARTY !!!!
+python train.py --img 640 --batch 16 --epochs 5 --data datasets/DroneIR.yaml --weights yolov5s.pt --device 0 --name nano_5_epochs --seed 42
+
+
+
+test:
+
+python val.py --weights runs/train/nano_finetune_bigdata_5epochs/weights/best.pt --data datasets/DroneIR.yaml --task test --name 5epochs_newtest
+
+dla obu modeli, 1 epoka - 5 epok
+
+
+po val.py w konsoli beda liczby typu:
+Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 1846/1846 [10:33<00:00,  2.91it/s]
+	all      59051      57447      0.918      0.783      0.832      0.435
+	
+	trzeba to zapisac i potem porownac wyniki tak jak w pliku excel

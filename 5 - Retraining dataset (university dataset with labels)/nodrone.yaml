@@ -1,0 +1,15 @@
+train:
+  - datasets/DroneIR/train
+  - datasets/DroneIR/notdronetrain
+
+val:
+  - datasets/DroneIR/val
+  - datasets/DroneIR/notdroneval
+
+test: datasets/DroneIR/test
+
+# Classes
+names:
+  0: drone
+  1: notdrone
+nc: 2

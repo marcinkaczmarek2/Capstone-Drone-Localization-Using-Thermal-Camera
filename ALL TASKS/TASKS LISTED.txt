@@ -1,0 +1,89 @@
+TASK ASSIGNMENTS AND SCHEDULE
+
+EXECUTION ORDER (ALWAYS):
+1. Mateusz
+2. Marcin
+3. Szymon
+
+
+WEEK 1:
+• Preparation of a comparative analysis of thermal cameras (advantages and disadvantages)  
+  – WORD DOCUMENT
+
+• Creation or identification of a database of thermal recordings of flying drones  
+  – WORD DOCUMENT
+
+• Review of drone detection methods in thermal imaging recordings using AI-based and classical computer vision approaches  
+  – WORD DOCUMENT
+
+
+WEEK 2:
+• Creation of a mini test set and a detection evaluation framework (IoU, precision, recall)  
+  – ZIP PROJECT
+
+• Drone detection in thermal images using YOLOv5  
+  – WORD DOCUMENT
+
+• Analysis of thermal image quality  
+  – WORD DOCUMENT
+
+
+WEEK 3:
+• Failure of deploying and running an off-the-shelf solution  
+• Repeated unsuccessful deployment attempts  
+• No usable results obtained  
+
+
+WEEK 4:
+• Training YOLOv5m: comparison of 1 epoch vs. 5 epochs  
+  – EXCEL
+
+• Training YOLOv5n: comparison of 1 epoch vs. 5 epochs  
+  – EXCEL, VIDEOS
+
+• Training YOLOv5s: comparison of 1 epoch vs. 5 epochs  
+  – FAILED, WORD DOCUMENT
+
+
+WEEK 5:
+• Fine-tuning a small model on a new dataset (DLUTI-32) to include a new object class: “notdrone”  
+  – MODEL
+
+• Evaluation of detection results on a new dataset (university outdoor recordings) using nano and small models (after fine-tuning)  
+  – VIDEOS
+
+• PRIORITY: Conversion of ground truth bounding box labels to YOLO-compatible format  
+  – WORD DOCUMENT
+
+
+WEEK 6:
+• Training a model on the new database and evaluation of results  
+  – MODEL, RESULTS (MP4)
+
+• PRIORITY: Preparation of as many labels as possible for university drone recordings  
+  – JPG, TXT
+
+• Research on methods for handling moving camera scenarios  
+  – WORD DOCUMENT
+
+
+WEEK 7:
+• Integration of YOLO with a visual tracker (DeepSORT or ByteTrack)  
+  – TXT, PYTHON FILES, MP4
+
+• AirSim simulation setup for drone-chasing-drone experiments  
+  – JSON, PYTHON FILES, WORD DOCUMENT, MP4
+
+• Implementation and testing of a Kalman Filter-based tracker  
+  – NOT COMPLETED
+
+
+WEEK 8:
+• AirSim simulation setup for drone-chasing-drone experiments with a thermal camera  
+  – MP4, PYTHON FILES, JSON, CSV
+
+• Training a drone tracking model incorporating motion history (temporal context)  
+  – PYTHON FILES, MP4
+
+• Implementation and testing of improved tracking and position prediction methods  
+  – PYTHON FILES, MP4

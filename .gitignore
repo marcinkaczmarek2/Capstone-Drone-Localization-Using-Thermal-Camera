@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# AirSim
+Saved/
+*.sln
+*.xcodeproj
+*.xcworkspace
+*.db
+
+# YOLOv5 and training outputs
+runs/
+weights/
+data/*.yaml
+*.pt
+*.onnx
+*.engine
+*.tflite
+
+# Datasets and large files
+datasets/
+*.zip
+*.tar.gz
+*.h5
+*.npy
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tmp
+*.bak

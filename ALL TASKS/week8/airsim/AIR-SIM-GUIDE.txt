@@ -1,0 +1,216 @@
+IDIOT-PROOF GUIDE: AIRSIM + PYTHON DRONE SCRIPT
+==============================================
+
+THIS IS A STEP-BY-STEP GUIDE.
+ASSUME YOU KNOW NOTHING.
+FOLLOW IT EXACTLY.
+
+------------------------------------------------
+1. WHAT THIS SCRIPT DOES
+------------------------------------------------
+- Connects Python to Microsoft AirSim
+- Uses TWO drones:
+  - TARGET  → moves randomly
+  - CHASER  → records thermal-style video
+- Records:
+  - MP4 video from chaser camera
+  - CSV telemetry for both drones
+- Saves everything to:
+  Documents/AirSim/recordings/
+
+------------------------------------------------
+2. WHAT YOU NEED (CHECKLIST)
+------------------------------------------------
+YOU MUST HAVE:
+- Windows 10 or 11
+- Unreal Engine installed
+- AirSim installed
+- Python 3.10 or 3.11
+- One AirSim environment (Blocks)
+- This Python script saved as .py
+
+------------------------------------------------
+3. INSTALL PYTHON
+------------------------------------------------
+1. Go to:
+   https://www.python.org/downloads/
+
+2. Download Python 3.10 or 3.11
+
+3. VERY IMPORTANT:
+   [X] Add Python to PATH
+
+4. Click Install
+
+CHECK:
+Open CMD and type:
+python --version
+
+------------------------------------------------
+4. INSTALL PYTHON LIBRARIES
+------------------------------------------------
+Open CMD and type:
+
+pip install airsim numpy opencv-python
+
+------------------------------------------------
+5. INSTALL UNREAL ENGINE
+------------------------------------------------
+1. Install Epic Games Launcher
+2. Create Epic account
+3. Install Unreal Engine
+
+RECOMMENDED:
+- Unreal Engine 4.27 (most stable with AirSim)
+
+------------------------------------------------
+6. INSTALL AIRSIM
+------------------------------------------------
+1. Go to:
+   https://github.com/microsoft/AirSim
+
+2. Click "Code" → Download ZIP
+   OR clone with git
+
+3. Open CMD in AirSim folder
+
+4. Run:
+   build.cmd
+
+WAIT until it finishes.
+
+------------------------------------------------
+7. GET AN AIRSIM ENVIRONMENT (BLOCKS)
+------------------------------------------------
+1. Go to:
+   https://github.com/microsoft/AirSim/releases
+
+2. Download "Blocks" environment
+
+3. Extract it
+
+4. Run Blocks.exe ONCE and close it
+
+------------------------------------------------
+8. WHERE TO PUT settings.json (VERY IMPORTANT)
+------------------------------------------------
+settings.json MUST BE HERE:
+
+C:\Users\YOUR_USERNAME\Documents\AirSim\settings.json
+
+NOT:
+- in your Python folder
+- in AirSim repo
+- in Unreal project
+
+ONLY:
+Documents/AirSim/
+
+------------------------------------------------
+9. settings.json FOR THIS SCRIPT
+------------------------------------------------
+Create file:
+settings.json
+
+PASTE THIS EXACT CONTENT:
+
+{
+  "SettingsVersion": 1.2,
+  "SimMode": "Multirotor",
+  "Vehicles": {
+    "Chaser": {
+      "VehicleType": "SimpleFlight",
+      "Cameras": {
+        "thermal_cam": {
+          "X": 0, "Y": 0, "Z": 0,
+          "Pitch": 0, "Roll": 0, "Yaw": 0
+        }
+      }
+    },
+    "Target": {
+      "VehicleType": "SimpleFlight"
+    }
+  }
+}
+
+SAVE FILE.
+
+------------------------------------------------
+10. START AIRSIM (ORDER MATTERS)
+------------------------------------------------
+1. Double-click Blocks.exe
+2. WAIT until the world loads
+3. DO NOT CLOSE IT
+
+------------------------------------------------
+11. SAVE THE PYTHON SCRIPT
+------------------------------------------------
+Save the script as:
+
+airsim_record.py
+
+Location does NOT matter.
+
+------------------------------------------------
+12. RUN THE SCRIPT
+------------------------------------------------
+Open CMD in the script folder and run:
+
+python airsim_record.py
+
+------------------------------------------------
+13. WHAT YOU SHOULD SEE
+------------------------------------------------
+- Two drones take off
+- Target moves randomly
+- Chaser slowly climbs and rotates
+- Console prints recording progress
+
+AFTER FINISH:
+Documents/AirSim/recordings/
+
+Contains:
+- chaser_thermal.mp4
+- telemetry.csv
+
+------------------------------------------------
+14. HOW TO STOP SAFELY
+------------------------------------------------
+Press:
+CTRL + C
+
+Script will:
+- Land drones
+- Disarm
+- Exit cleanly
+
+------------------------------------------------
+15. COMMON ERRORS
+------------------------------------------------
+
+"Connection refused"
+→ AirSim NOT running
+
+"Vehicle not found"
+→ Wrong names (must be Chaser / Target)
+
+Black video
+→ Camera name mismatch (thermal_cam)
+
+No files saved
+→ Check Documents/AirSim/recordings/
+
+------------------------------------------------
+16. TL;DR FOR TOTAL IDIOT
+------------------------------------------------
+1. Install Python
+2. pip install airsim numpy opencv-python
+3. Install Unreal + AirSim
+4. Put settings.json in Documents/AirSim/
+5. Run Blocks.exe
+6. python airsim_record.py
+7. Done.
+
+------------------------------------------------
+END.
+IF YOU FOLLOWED THIS EXACTLY, IT WILL WORK.
